@@ -5,6 +5,8 @@
     --lotto-ball-text-color: #333;
     --button-bg-color: #4CAF50;
     --button-text-color: #fff;
+    --input-border-color: #ccc;
+    --input-bg-color: #f9f9f9;
 }
 
 [data-theme="dark"] {
@@ -14,6 +16,8 @@
     --lotto-ball-text-color: #fff;
     --button-bg-color: #666;
     --button-text-color: #fff;
+    --input-border-color: #555;
+    --input-bg-color: #444;
 }
 
 body {
@@ -70,4 +74,47 @@ body {
 
 .theme-switcher {
     margin-top: 20px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+    background-color: var(--input-bg-color);
+}
+
+.contact-form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+}
+
+.contact-form button[type="submit"] {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button[type="submit"]:hover {
+    opacity: 0.8;
 }
